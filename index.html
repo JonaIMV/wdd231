@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="WDD231 – Dynamic Web Fundamentals. This page is the Index page, it is referenced by the web server to be delivered to the requesting client for any directory in which it resides. Here the user can see a description of the activity and gives a way to subscribe to our newsletter">
+  <meta name="author" content="Jonathan Isai Morales Valencia">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:wght@600&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/index-large.css">
+  <title>WDD 231 – Dynamic Web Fundamentals - Jonathan Isai Morales Valencia</title>
+  <script src="scripts/index.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="brand">
+        <div class="logo">
+          <img src="images/logo.png" alt="Jonathan Logo">
+        </div>
+        <h1>Jonathan M.V</h1>
+      </div>
+      <button id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <nav class="nav-links" id="nav-menu">
+        <a href="home.html">Home</a>
+        <a href="#">Chamber Project</a>
+        <a href="#">Final Project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h2 class="page-title">Home</h2>
+    <div class="content">
+
+    <section class="about-me">
+      <h3>About Me</h3>
+      <p>
+        Hello, my name is Jonathan Morales Valencia. I'm 34, almost 35 years old.
+        I'm an amateur drone pilot, and I love seeing the view from above.
+        I'm also a real estate agent currently living in Cancún, Quintana Roo.
+        The skills I am learning in these courses help me create better websites and digital content to promote real estate properties more effectively.
+      </p>
+    </section>
+
+    <section class="student-photo">
+      <h3>Student Photo</h3>
+      <img src="images/student.jpg" alt="Student Photo">
+    </section>
+    </div>
+    <section class="web-courses">
+      <h3>Web Certificate Courses</h3>
+      <div class="course-filters">
+        <button class="filter active" data-category="all">All</button>
+        <button class="filter" data-category="cse">CSE</button>
+        <button class="filter" data-category="wdd">WDD</button>
+      </div>
+      <ul class="course-list">
+        <li data-category="wdd">WDD 130</li>
+        <li data-category="wdd">WDD 230</li>
+        <li data-category="wdd">WDD 231</li>
+        <li data-category="cse">CSE 121</li>
+        <li data-category="cse">CSE 111</li>
+      </ul>
+    </section>
+  </main>
+
+  <div class="social-logos">
+    <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+    <a href="#"><img src="images/github.png" alt="GitHub"></a>
+    <a href="#"><img src="images/x.png" alt="X"></a>
+  </div>
+
+  <footer>
+    <p><span id="year"></span> Jonathan Isai Morales Valencia Quintana Roo, Mexico</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
