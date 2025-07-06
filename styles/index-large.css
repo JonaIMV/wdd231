@@ -1,85 +1,25 @@
 @media screen and (min-width: 1200px) {
-  main {
-    display: grid;
-    grid-template-areas:
-      "title"
-      "content"
-      "courses";
-    gap: 1rem;
-    max-width: 1200px;
-    margin: auto;
-    padding: 2rem;
-  }
-
   .page-title {
-    grid-area: title;
-    text-align: center;
-    margin: 0;
+    font-size: 2.5rem;
+    padding: 1.5rem 0 1rem 0;
+    border-bottom: 4px solid #4A5759;
   }
-
-  .content {
-    grid-area: content;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 1rem;
-  }
-
-  .about-me {
-    grid-column: 1;
-  }
-
-  .student-photo {
-    grid-column: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .web-courses {
-    grid-area: courses;
-  }
-
-  .web-courses .course-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .nav-links {
-    display: flex !important;
+  .about-content {
     flex-direction: row;
-    gap: 1rem;
-    position: static;
-    background-color: transparent;
-    border: none;
-  }
-
-  .nav-links a {
-    color: #fff;
-    padding: 0.5rem 1rem;
-  }
-
-  .nav-links a:hover {
-    background-color: #335c67;
-    border-radius: 4px;
-  }
-
-  #menu-toggle {
-    display: none;
-  }
-
-  .social-logos {
-    display: flex;
-    justify-content: center;
+    align-items: flex-start;
     gap: 2rem;
-    margin: 2rem 0;
   }
 
-  .social-logos img {
-    width: 40px;
-    height: auto;
+  .about-text {
+    flex: 2;
+  }
+
+  .about-photo {
+    flex: 1;
+    text-align: center;
+  }
+
+  .about-photo img {
+    max-width: 200px;
   }
 }
