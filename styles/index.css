@@ -101,9 +101,7 @@ main {
   box-sizing: border-box;
 }
 .about-content {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  display: block;
 }
 .about-photo {
   text-align: center;
@@ -120,6 +118,8 @@ main {
 }
 
 .about-photo img {
+  margin: 0 auto;
+  display: block;
   max-width: 150px;
   width: 100%;
   border-radius: 8px;
