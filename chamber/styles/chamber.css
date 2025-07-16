@@ -69,11 +69,15 @@ header {
 main {
   padding: 1rem;
 }
-
-.hero {
-  position: relative;
+h1 {
+  font-size: 2rem;
   margin-bottom: 1rem;
-  margin-left: calc(-50vw + 50%);
+  text-align: center;
+}
+.hero {
+  position:absolute;
+  margin-bottom: 1rem;
+  
   overflow: hidden;
 }
 
