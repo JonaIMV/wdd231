@@ -1,0 +1,58 @@
+[
+  {
+    "name": "TuCasa Caribe Realty",
+    "address": "123 Main St, Playa del Carmen, Q.R., Mexico",
+    "phone": "+52 1234567890",
+    "website": "https://www.tucasacariberealty.com",
+    "image": "casacaribe.png",
+    "membership": 3
+  },
+  {
+    "name": "Cancun Tours",
+    "address": "Boulevard Kukulkan, Cancun, Q.R.",
+    "phone": "+52 9981234567",
+    "website": "https://www.cancuntours.com",
+    "image": "cancuntours.svg",
+    "membership": 2
+  },
+  {
+    "name": "Eco Riviera",
+    "address": "Av. Tulum, Tulum, Q.R.",
+    "phone": "+52 9842345678",
+    "website": "https://www.ecoriviera.com",
+    "image": "ecoriviera.png",
+    "membership": 1
+  },
+  {
+    "name": "Beach Club Co.",
+    "address": "Calle Coral, Puerto Morelos, Q.R.",
+    "phone": "+52 9988887777",
+    "website": "https://www.beachclubco.com",
+    "image": "beachclub.png",
+    "membership": 2
+  },
+  {
+    "name": "Sunshine Café",
+    "address": "Calle 10 Nte, Playa del Carmen",
+    "phone": "+52 9845678910",
+    "website": "https://www.sunshinecafe.mx",
+    "image": "sunshinecafe.png",
+    "membership": 1
+  },
+  {
+    "name": "Ocean Fitness",
+    "address": "Zona Hotelera, Cancun",
+    "phone": "+52 9985551122",
+    "website": "https://www.oceanfitness.mx",
+    "image": "oceanfitness.png",
+    "membership": 3
+  },
+  {
+    "name": "Local Art Shop",
+    "address": "Calle 5 Sur, Cozumel",
+    "phone": "+52 9876543210",
+    "website": "https://www.localartcozumel.mx",
+    "image": "localart.png",
+    "membership": 2
+  }
+]

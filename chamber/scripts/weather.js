@@ -24,13 +24,15 @@ async function getWeather() {
     const humidity = today.main.humidity;
 
     currentWeather.innerHTML = `
-      <p><strong>${temp}°C</strong></p>
-      <p>${desc}</p>
-      <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${desc}">
-      <p>Humidity: ${humidity}%</p>
+      <p>
+    <img class="weather-icon" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${desc}">
+    <strong>${temp}°C</strong> - ${desc}, Humidity: ${humidity}%
+  </p>
     `;
+
+    
     forecastList.innerHTML = "";
-    for (let i = 7; i <= 39; i += 8) {
+    for (let i = 8; i <= 24; i += 8) {
       const day = data.list[i];
       const date = new Date(day.dt_txt).toLocaleDateString("en-US", { weekday: "short" });
       const dayTemp = Math.round(day.main.temp);
@@ -39,8 +41,8 @@ async function getWeather() {
 
       forecastList.innerHTML += `
         <li>
+          <img class="weather-icon" src="https://openweathermap.org/img/wn/${dayIcon}@2x.png" alt="${dayDesc}">
           <strong>${date}</strong>: ${dayTemp}°C
-          <img src="https://openweathermap.org/img/wn/${dayIcon}@2x.png" alt="${dayDesc}">
         </li>
       `;
     }
@@ -51,3 +53,4 @@ async function getWeather() {
 }
 
 getWeather();
+
