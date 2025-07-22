@@ -9,6 +9,16 @@
     gap: 1rem;
     margin-top: 0;
   }
+   #nav-menu {
+    position: static; 
+    display: flex !important; 
+    flex-direction: row;
+    gap: 1rem;
+    background-color: transparent; 
+    padding: 0;
+    border-radius: 0;
+    z-index: auto;
+  }
 
   #menu-toggle {
     display: none;

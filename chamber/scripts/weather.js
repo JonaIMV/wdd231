@@ -1,3 +1,4 @@
+// weather.js
 const apiKey = "a22c8e4af28a05302f1a809f8f228969";
 const city = "Cancun";
 const units = "metric"; 
@@ -6,17 +7,30 @@ const apiURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid
 const currentWeather = document.getElementById("current-weather");
 const forecastList = document.getElementById("forecast");
 
-currentWeather.textContent = "Loading current weather...";
-forecastList.innerHTML = "<li>Loading forecast...</li>";
+function showLoading() {
+  if (currentWeather) currentWeather.textContent = "Loading current weather...";
+  if (forecastList) forecastList.innerHTML = "<li>Loading forecast...</li>";
+}
 
-async function getWeather() {
+function clearLoading() {
+  if (currentWeather) currentWeather.textContent = "";
+  if (forecastList) forecastList.innerHTML = "";
+}
+
+export async function getWeather() {
+  showLoading();
+
   try {
     const response = await fetch(apiURL);
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
     
     const data = await response.json();
 
-    
+    if (!currentWeather || !forecastList) {
+      console.error("Weather container elements not found.");
+      return;
+    }
+
     const today = data.list[0];
     const temp = Math.round(today.main.temp);
     const desc = today.weather[0].description;
@@ -25,12 +39,11 @@ async function getWeather() {
 
     currentWeather.innerHTML = `
       <p>
-    <img class="weather-icon" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${desc}">
-    <strong>${temp}°C</strong> - ${desc}, Humidity: ${humidity}%
-  </p>
+        <img class="weather-icon" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${desc}">
+        <strong>${temp}°C</strong> - ${desc}, Humidity: ${humidity}%
+      </p>
     `;
 
-    
     forecastList.innerHTML = "";
     for (let i = 8; i <= 24; i += 8) {
       const day = data.list[i];
@@ -48,9 +61,7 @@ async function getWeather() {
     }
   } catch (error) {
     console.error("Error fetching weather:", error);
-    currentWeather.textContent = "Unable to load weather data.";
+    if (currentWeather) currentWeather.textContent = "Unable to load weather data.";
   }
 }
-
-getWeather();
 

@@ -43,17 +43,42 @@ header {
 }
 
 #menu-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
   background: none;
   border: none;
   color: white;
   font-size: 2rem;
+  z-index: 10;
 }
 
-.nav-links {
-  display: none;
+#nav-menu {
+  position: absolute;
+  top: 3.5rem;
+  right: 1rem;
+  background-color: #333;
+  display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  z-index: 5;
+}
+#nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding-bottom: 0.2rem;
+}
+#nav-menu.hidden {
+  display: none;
+}
+
+#nav-menu a.active {
+  color: var(--accent-color);
+  font-weight: bold;
+  border-bottom: 2px solid var(--accent-color);
 }
 
 .nav-links a {
@@ -75,10 +100,8 @@ h1 {
   text-align: center;
 }
 .hero {
-  position:absolute;
-  margin-bottom: 1rem;
-  
-  overflow: hidden;
+  position: relative;
+  z-index: 0;
 }
 
 .hero img {
@@ -87,6 +110,9 @@ h1 {
   object-fit: cover;
   display: block;
   max-height: 400px;
+  object-position: 50% 80%;
+  position: relative;
+  z-index: 0;
 }
 
 .info-panels {
@@ -94,6 +120,10 @@ h1 {
   flex-direction: column;
   gap: 1rem;
   margin-top: 1rem;
+  position: relative;
+  z-index: 2;
+  background-color: white;
+
 }
 
 .info-panels > div {
@@ -220,3 +250,10 @@ footer {
   filter: invert(1);
 }
 
+.nav-links a.active {
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 5px;
+  padding: 0.3rem 0.75rem;
+  transition: background-color 0.3s ease;
+}
