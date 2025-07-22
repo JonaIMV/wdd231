@@ -3,12 +3,6 @@
     flex-wrap: nowrap;
   }
 
-  .nav-links {
-    display: flex !important;
-    flex-direction: row;
-    gap: 1rem;
-    margin-top: 0;
-  }
    #nav-menu {
     position: static; 
     display: flex !important; 
