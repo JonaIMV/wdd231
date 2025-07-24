@@ -1,6 +1,6 @@
 export function highlightCurrentPage() {
   const currentPage = location.pathname.split("/").pop();
-  const navLinks = document.querySelectorAll(".nav-links a");
+  const navLinks = document.querySelectorAll("#nav-menu a");
 
   navLinks.forEach(link => {
     const href = link.getAttribute("href");

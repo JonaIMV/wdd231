@@ -5,7 +5,7 @@
     "phone": "+52 1234567890",
     "website": "https://www.tucasacariberealty.com",
     "image": "casacaribe.png",
-    "membership": 3
+    "membership": "Gold"
   },
   {
     "name": "Cancun Tours",
@@ -13,7 +13,7 @@
     "phone": "+52 9981234567",
     "website": "https://www.cancuntours.com",
     "image": "cancuntours.svg",
-    "membership": 2
+    "membership": "Silver"
   },
   {
     "name": "Eco Riviera",
@@ -21,7 +21,7 @@
     "phone": "+52 9842345678",
     "website": "https://www.ecoriviera.com",
     "image": "ecoriviera.png",
-    "membership": 1
+    "membership": "Bronze"
   },
   {
     "name": "Beach Club Co.",
@@ -29,7 +29,7 @@
     "phone": "+52 9988887777",
     "website": "https://www.beachclubco.com",
     "image": "beachclub.png",
-    "membership": 2
+    "membership": "Bronze"
   },
   {
     "name": "Sunshine Café",
@@ -37,7 +37,7 @@
     "phone": "+52 9845678910",
     "website": "https://www.sunshinecafe.mx",
     "image": "sunshinecafe.png",
-    "membership": 1
+    "membership": "Gold"
   },
   {
     "name": "Ocean Fitness",
@@ -45,7 +45,7 @@
     "phone": "+52 9985551122",
     "website": "https://www.oceanfitness.mx",
     "image": "oceanfitness.png",
-    "membership": 3
+    "membership": "Gold"
   },
   {
     "name": "Local Art Shop",
@@ -53,6 +53,6 @@
     "phone": "+52 9876543210",
     "website": "https://www.localartcozumel.mx",
     "image": "localart.png",
-    "membership": 2
+    "membership": "Silver"
   }
 ]

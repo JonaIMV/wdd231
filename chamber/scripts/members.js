@@ -1,4 +1,3 @@
-// members.js
 
 export async function loadMembers(containerId) {
   const container = document.getElementById(containerId);

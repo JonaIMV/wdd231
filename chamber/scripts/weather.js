@@ -1,4 +1,4 @@
-// weather.js
+
 const apiKey = "a22c8e4af28a05302f1a809f8f228969";
 const city = "Cancun";
 const units = "metric"; 
@@ -45,9 +45,11 @@ export async function getWeather() {
     `;
 
     forecastList.innerHTML = "";
-    for (let i = 8; i <= 24; i += 8) {
+    const forecastSteps = [8, 16, 24];
+    forecastSteps.forEach(i => {
       const day = data.list[i];
-      const date = new Date(day.dt_txt).toLocaleDateString("en-US", { weekday: "short" });
+      const date = new Date(forecast.dt_txt);
+      const dayName = date.toLocaleDateString("en-US", { weekday: "short" });
       const dayTemp = Math.round(day.main.temp);
       const dayIcon = day.weather[0].icon;
       const dayDesc = day.weather[0].description;
@@ -58,7 +60,7 @@ export async function getWeather() {
           <strong>${date}</strong>: ${dayTemp}°C
         </li>
       `;
-    }
+    });
   } catch (error) {
     console.error("Error fetching weather:", error);
     if (currentWeather) currentWeather.textContent = "Unable to load weather data.";

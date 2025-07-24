@@ -26,6 +26,7 @@ header {
 }
 
 .navbar {
+  position: relative; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,20 +51,20 @@ header {
   border: none;
   color: white;
   font-size: 2rem;
-  z-index: 10;
+  z-index: 15;
 }
 
 #nav-menu {
   position: absolute;
   top: 3.5rem;
   right: 1rem;
-  background-color: #333;
+  background-color:var(--primary-color);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   padding: 1rem;
   border-radius: 0.5rem;
-  z-index: 5;
+  z-index: 5; 
 }
 #nav-menu a {
   color: white;
@@ -76,15 +77,11 @@ header {
 }
 
 #nav-menu a.active {
-  color: var(--accent-color);
-  font-weight: bold;
-  border-bottom: 2px solid var(--accent-color);
-}
-
-
-
-.nav-links.active {
-  display: flex;
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 5px;
+  padding: 0.3rem 0.75rem;
+  transition: background-color 0.3s ease;
 }
 
 main {
@@ -139,12 +136,18 @@ h1 {
 }
 
 .weather-icon {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
   vertical-align: middle;
-  margin-right: 0.5rem;
 }
-
+#forecast li {
+  list-style: none;
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 .info-panels h2 {
   background-color: var(--primary-color);
   color: white;
@@ -252,4 +255,108 @@ footer {
   border-radius: 5px;
   padding: 0.3rem 0.75rem;
   transition: background-color 0.3s ease;
+}
+
+
+.spotlights {
+  padding: 2rem;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.spotlight-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.spotlight-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.spotlight-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+   object-fit: cover;
+   
+}
+
+/*home-page specific styles*/
+
+.home-page .spotlight-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.home-page .spotlight-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-page .spotlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.home-page .spotlight-card img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+}
+
+.home-page .spotlight-card h3 {
+  margin: 0.5rem 0;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color:#0077b6;
+}
+
+/*buttom section styles*/
+
+.cta {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color:var(--secondary-color); 
+  border-top: 2px solid var(--accent-color);
+  margin-top: 2rem;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  color: #283618;
+  margin-bottom: 0.5rem;
+}
+
+.cta p {
+  font-size: 1.1rem;
+  color: #606c38;
+  margin-bottom: 1rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color:var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--accent-color);
+  color: #ffffff;
 }
