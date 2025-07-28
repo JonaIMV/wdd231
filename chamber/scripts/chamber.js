@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   getWeather();
   setHamburgerMenu();
 
-  if (window.location.pathname.endsWith("join-us.html")) {
+  if (window.location.pathname.endsWith("join.html")) {
     import("./join-us.js")
       .then(module => {
         if (module.initJoinPage) {
