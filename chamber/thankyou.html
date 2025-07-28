@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="This website will serve as a resource hub for businesses in the city of Cancun. The site will provide information on local events, host networking opportunities, create business directories, and encourage local shopping. It aims to promote local economic growth, support local businesses, and foster a sense of community between the businesses.">
+    <meta property="og:title" content="Chamber of Commerce thankyou Page">
+    <meta property="og:description" content="This website will serve as a resource hub for businesses in the city of Cancun. The site will provide information on local events, host networking opportunities, create business directories, and encourage local shopping. It aims to promote local economic growth, support local businesses, and foster a sense of community between the businesses.">
+    <meta property="og:image" content="https://jonathan-morales.github.io/wdd231/chamber/images/chamberofcommerce.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://jonathan-morales.github.io/wdd231/chamber/joinus.html">
+    <meta name="author" content="Jonathan Isai Morales Valencia">
+    <link rel="icon" href="cancun.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:wght@600&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/chamber-large.css">
+    <title>Thank You</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="brand">
+                <div class="logo">
+                    <img src="images/chamberofcommerce.png" alt="Chamber Commerce ">
+                </div>
+            </div>
+            <button id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+            <nav id="nav-menu" class="hidden">
+                <a href ="index.html">Home</a>
+                <a href="directory.html">Directory</a>
+                <a href="discover.html">Discover</a>
+                <a href="join.html">Join Us</a>
+            </nav>
+        </div>
+    </header>
+    <nav>
+        <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+        <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join-us.html">Join</a></li>
+        </ul>
+    </nav>
+
+  <main class="thankyou-container">
+     <h1>Thank You</h1>
+         <div class="hero">
+            
+            <img src="images/chambercommerce.jpg" alt="Hero image representing cancun " class="hero-image">
+         </div>
+    <section class="thankyou-message">
+      <h2>Thank you for joining our Chamber!</h2>
+      <p>We’ve received your submission and we’re excited to have you on board.</p>
+    </section>
+
+    <section class="submission-details">
+      <h3>Your Submission Details</h3>
+      <p><strong>First Name:</strong> <span id="firstNameField"></span></p>
+      <p><strong>Last Name:</strong> <span id="lastNameField"></span></p>
+      <p><strong>Email:</strong> <span id="emailField"></span></p>
+      <p><strong>Phone:</strong> <span id="phoneField"></span></p>
+      <p><strong>Business/Organization:</strong> <span id="businessField"></span></p>
+      <p><strong>Date Submitted:</strong> <span id="timestampField"></span></p>
+    </section>
+  </main>
+
+  <footer>
+        <div class="footer-info">
+            <p>&copy; <span id="year"></span> Jonathan Isai Morales Valencia<br>Quintana Roo, Mexico</p>
+            <p id="lastModified"></p>
+        </div>
+        <div class="social-icons">
+            <a href="#" aria-label="YouTube">
+            <img src="images/youtube.svg" alt="YouTube icon">
+            </a>
+            <a href="#" aria-label="Twitter">
+            <img src="images/twitter.svg" alt="Twitter icon">
+            </a>
+            <a href="#" aria-label="LinkedIn">
+            <img src="images/linkedin.svg" alt="LinkedIn icon">
+            </a>
+        </div>
+    </footer>
+
+ 
+   <script type="module" src="scripts/chamber.js"></script>
+</body>
+</html>

@@ -7,6 +7,7 @@ import { loadSpotlights } from "./spotlights.js";
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM fully loaded and parsed");
 
+  
   const memberContainer = document.getElementById("memberContainer");
   if (memberContainer) {
     loadMembers("memberContainer");
@@ -18,10 +19,16 @@ document.addEventListener("DOMContentLoaded", () => {
     loadSpotlights("spotlight-container");
   }
 
+  
   highlightCurrentPage();
+
+  
   getWeather();
+
+  
   setHamburgerMenu();
 
+  
   if (window.location.pathname.endsWith("join.html")) {
     import("./join-us.js")
       .then(module => {
@@ -31,6 +38,18 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .catch(err => {
         console.error("Failed to load join-us.js module:", err);
+      });
+  }
+
+  if (window.location.pathname.endsWith("thankyou.html")) {
+    import("./thankyou.js")
+      .then(module => {
+        if (module.loadThankYouData) {
+          module.loadThankYouData();
+        }
+      })
+      .catch(err => {
+        console.error("Failed to load thankyou.js module:", err);
       });
   }
 });
