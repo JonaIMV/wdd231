@@ -7,21 +7,30 @@ import { loadSpotlights } from "./spotlights.js";
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM fully loaded and parsed");
 
-  
   const memberContainer = document.getElementById("memberContainer");
   if (memberContainer) {
     loadMembers("memberContainer");
     setupViewToggle("memberContainer");
   }
 
-  
   const spotlightContainer = document.getElementById("spotlight-container");
   if (spotlightContainer) {
     loadSpotlights("spotlight-container");
   }
 
-  // Ejecuta en todas las páginas
   highlightCurrentPage();
   getWeather();
   setHamburgerMenu();
+
+  if (window.location.pathname.endsWith("join-us.html")) {
+    import("./join-us.js")
+      .then(module => {
+        if (module.initJoinPage) {
+          module.initJoinPage();
+        }
+      })
+      .catch(err => {
+        console.error("Failed to load join-us.js module:", err);
+      });
+  }
 });

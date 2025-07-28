@@ -45,7 +45,86 @@
             
             <img src="images/chambercommerce.jpg" alt="Hero image representing cancun " class="hero-image">
          </div>
-       
+         <form method="get" action="thankyou.html">
+         <label>
+            First Name:
+            <input type="text" name="fname" title="Enter your first name" required autocomplete="given-name">
+         </label>
+         <label>
+            Last Name:
+            <input type="text" name="lname" title="Enter your last name" required autocomplete="family-name" >
+         </label>
+         <label>
+            Title in Organization:
+            <input type="text" name="title" title="Enter your title in the organization" required autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+         </label>
+         <label>
+            Email:
+            <input type="email" name="email" title="Enter your email address" required autocomplete="email" placeholder="example@email.com" >
+         </label>
+         <label>
+            Mobile Phone:
+            <input type="tel" name="phone" title="Enter your mobile phone number" required autocomplete="tel" >
+         </label>
+         <label>
+            Organization Name:
+            <input type="text" name="organization" title="Your organization's name" required autocomplete="organization" >
+         </label>
+         <label>
+            membership Level:
+            <select name="membership" title="Select your membership level">
+                <option value="np">NP Membership (Non-Profit - Free)</option>
+                <option value="bronze">Bronze Membership</option>
+                <option value="silver">Silver Membership</option>
+                <option value="gold">Gold Membership</option>
+            </select>
+         </label>
+         <label>
+            Organization Description:
+            <textarea name="description" title="Describe your business or organization"></textarea>
+         </label>
+         <input type="hidden" name="timestamp" id="timestamp" >
+         <input type="submit" value="Submit Application" >
+         </form>
+         <section class="membership-cards">
+            <div class="card bronze">
+                <h2>Bronze Membership</h2>
+                <a href="#bronzeModal">View Benefits</a>
+            </div>
+            <div class="card silver">
+                <h2>Silver Membership</h2>
+                <a href="#silverModal">View Benefits</a>
+            </div>
+            <div class="card gold">
+                <h2>Gold Membership</h2>
+                <a href="#goldModal">View Benefits</a>
+            </div>
+            <div class="card np">
+                <h2>Non-Profit Membership</h2>
+                <a href="#npModal">View Benefits</a>
+            </div>
+         </section>
+         <dialog id="bronzeModal">
+            <h3>Bronze Membership Benefits</h3>
+            <p>Includes event access and newsletter listing.</p>
+            <button onclick="document.getElementById('bronzeModal').close()">Close</button>
+         </dialog>
+            <dialog id="silverModal">
+                <h3>Silver Membership Benefits</h3>
+                <p>Includes Bronze benefits plus social media promotion.</p>
+                <button onclick="document.getElementById('silverModal').close()">Close</button>
+            </dialog>
+            <dialog id="goldModal">
+                <h3>Gold Membership Benefits</h3>
+                <p>Includes Silver benefits plus website listing and event sponsorship.</p>
+                <button onclick="document.getElementById('goldModal').close()">Close</button>
+            </dialog>
+            <dialog id="npModal">
+                <h3>Non-Profit Membership Benefits</h3>
+                <p>Includes free membership with access to all events and resources.</p>
+                <button onclick="document.getElementById('npModal').close()">Close</button>
+            </dialog>
+
         
         
     </main>

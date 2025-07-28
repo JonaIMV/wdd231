@@ -378,3 +378,150 @@ footer {
   background-color: var(--accent-color);
   color: #ffffff;
 }
+
+/* Modal styles and Form */
+
+
+form {
+  max-width: 600px;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #333;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+  margin-top: 0.4rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+form input[type="submit"] {
+  background-color: #0077b6;
+  color: white;
+  font-weight: 700;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover,
+form input[type="submit"]:focus {
+  background-color: #005f86;
+  outline: none;
+}
+
+
+.membership-cards {
+  max-width: 900px;
+  margin: 2rem auto 4rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.membership-cards .card {
+  background-color: #e0f0ff;
+  border-radius: 8px;
+  padding: 1.2rem 1rem;
+  width: 200px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: inherit;
+  cursor: default;
+  opacity: 0; 
+  transform: translateY(20px);
+  animation-fill-mode: forwards;
+}
+
+.membership-cards .card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #023e8a;
+}
+
+.membership-cards .card a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #0077b6;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.membership-cards .card a:hover,
+.membership-cards .card a:focus {
+  color: #005f86;
+  outline: none;
+}
+
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+dialog {
+  border: none;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  font-family: inherit;
+}
+
+dialog h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #023e8a;
+  font-size: 1.4rem;
+}
+
+dialog p {
+  line-height: 1.4;
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+
+dialog button.close {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+dialog button.close:hover,
+dialog button.close:focus {
+  background-color: #005f86;
+  outline: none;
+}
+
