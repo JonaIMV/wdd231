@@ -3,8 +3,6 @@ export function initJoinPage() {
   if (timestamp) {
     timestamp.value = new Date().toISOString();
   }
-
-  // Modal: abre con clic en los links de membresía
   document.querySelectorAll('.membership-cards a').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
@@ -13,16 +11,12 @@ export function initJoinPage() {
       if (modal) modal.showModal();
     });
   });
-
-  // Modal: cierra con botón de cerrar
   document.querySelectorAll('dialog button.close').forEach(btn => {
     btn.addEventListener('click', () => {
       const dialog = btn.closest('dialog');
       if (dialog) dialog.close();
     });
   });
-
-  // Animaciones en tarjetas de membresía
   const cards = document.querySelectorAll('.membership-cards .card');
   cards.forEach((card, index) => {
     card.style.opacity = '0';
@@ -30,27 +24,20 @@ export function initJoinPage() {
     card.style.animation = `fadeUp 1s ease-out forwards`;
     card.style.animationDelay = `${index * 0.2}s`;
   });
-
-  // Manejo del formulario
   const form = document.getElementById("join-form");
   if (form) {
     form.addEventListener("submit", (e) => {
-      e.preventDefault(); // ← evita que el formulario se envíe automáticamente
-
-      // Guarda datos en localStorage
+      e.preventDefault(); 
       localStorage.setItem("firstName", document.getElementById("firstName").value);
       localStorage.setItem("lastName", document.getElementById("lastName").value);
       localStorage.setItem("email", document.getElementById("email").value);
       localStorage.setItem("phone", document.getElementById("phone").value);
       localStorage.setItem("business", document.getElementById("business").value);
       localStorage.setItem("timestamp", document.getElementById("timestamp").value);
-
-      // Redirige a página de agradecimiento
       window.location.href = "thankyou.html";
     });
   }
 }
-
 export function initThankYouPage() {
   const firstName = localStorage.getItem("firstName") || "N/A";
   const lastName = localStorage.getItem("lastName") || "N/A";
@@ -58,13 +45,11 @@ export function initThankYouPage() {
   const phone = localStorage.getItem("phone") || "N/A";
   const business = localStorage.getItem("business") || "N/A";
   const timestamp = localStorage.getItem("timestamp") || "N/A";
-
   document.getElementById("thank-first-name").textContent = firstName;
   document.getElementById("thank-last-name").textContent = lastName;
   document.getElementById("thank-email").textContent = email;
   document.getElementById("thank-phone").textContent = phone;
   document.getElementById("thank-business").textContent = business;
-
   const formattedDate = timestamp !== "N/A" ? new Date(timestamp).toLocaleString() : "N/A";
   document.getElementById("thank-timestamp").textContent = formattedDate;
 }

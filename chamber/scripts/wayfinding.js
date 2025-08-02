@@ -1,7 +1,6 @@
 export function highlightCurrentPage() {
   const currentPage = location.pathname.split("/").pop();
   const navLinks = document.querySelectorAll("#nav-menu a");
-
   navLinks.forEach(link => {
     const href = link.getAttribute("href");
     if (href === currentPage || (currentPage === "" && href === "index.html")) {
@@ -10,8 +9,6 @@ export function highlightCurrentPage() {
     }
   });
 }
-
-
 export function setHamburgerMenu() {
   const menuToggle = document.getElementById('menu-toggle');
   const navMenu = document.getElementById('nav-menu');
@@ -20,7 +17,6 @@ export function setHamburgerMenu() {
     console.error("Menu toggle or navigation menu not found.");
     return;
   }
-
   menuToggle.addEventListener('click', () => {
     navMenu.classList.toggle('hidden');
     menuToggle.setAttribute(

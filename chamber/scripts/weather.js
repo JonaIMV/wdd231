@@ -11,39 +11,31 @@ function showLoading() {
   if (currentWeather) currentWeather.textContent = "Loading current weather...";
   if (forecastList) forecastList.innerHTML = "<li>Loading forecast...</li>";
 }
-
 function clearLoading() {
   if (currentWeather) currentWeather.textContent = "";
   if (forecastList) forecastList.innerHTML = "";
 }
-
 export async function getWeather() {
   showLoading();
-
   try {
     const response = await fetch(apiURL);
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-    
     const data = await response.json();
-
     if (!currentWeather || !forecastList) {
       console.error("Weather container elements not found.");
       return;
     }
-
     const today = data.list[0];
     const temp = Math.round(today.main.temp);
     const desc = today.weather[0].description;
     const icon = today.weather[0].icon;
     const humidity = today.main.humidity;
-
     currentWeather.innerHTML = `
       <p>
         <img class="weather-icon" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${desc}">
         <strong>${temp}°C</strong> - ${desc}, Humidity: ${humidity}%
       </p>
     `;
-
     forecastList.innerHTML = "";
     const forecastSteps = [8, 16, 24];
     forecastSteps.forEach(i => {
@@ -53,7 +45,6 @@ export async function getWeather() {
       const dayTemp = Math.round(day.main.temp);
       const dayIcon = day.weather[0].icon;
       const dayDesc = day.weather[0].description;
-
       forecastList.innerHTML += `
         <li>
           <img class="weather-icon" src="https://openweathermap.org/img/wn/${dayIcon}@2x.png" alt="${dayDesc}">
