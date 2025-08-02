@@ -145,28 +145,26 @@
 
 
 @media (min-width: 1025px) {
-  /* Contenedor en grid de 4 columnas */
   .places-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
-    padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 1rem;
   }
 
-  /* Cada tarjeta es un flex container fila */
   .place-card {
     display: flex;
     flex-direction: row;
+    align-items: stretch;
     background-color: #fff;
     border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    overflow: visible; /* No cortar contenido */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    overflow: visible;
     min-height: 200px;
   }
 
-  /* Imagen fija a la izquierda */
   .place-card img {
     width: 300px;
     height: 200px;
@@ -176,37 +174,34 @@
     flex-shrink: 0;
   }
 
-  /* Info a la derecha con padding */
   .place-info {
     padding: 1rem 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex: 1;
+    min-width: 0;
+    color: #333;
   }
 
-  /* Estilos del título */
   .place-info h2 {
     margin: 0 0 0.5rem 0;
-    font-size: 1.25rem;
     color: var(--accent-color);
+    font-size: 1.25rem;
   }
 
-  /* Dirección */
   .place-info address {
     font-style: normal;
     color: #555;
     margin-bottom: 0.5rem;
   }
 
-  /* Descripción */
   .place-info p {
+    margin-bottom: 1rem;
     font-size: 1rem;
     line-height: 1.4;
-    margin-bottom: 1rem;
-    color: #333;
   }
 
-  /* Botón */
   .place-info button {
     align-self: flex-start;
     background-color: var(--accent-color);
@@ -221,7 +216,7 @@
 
   .place-info button:hover,
   .place-info button:focus {
-    background-color: #004080; /* Color más oscuro al hover */
+    background-color: #004080;
   }
 }
- }
+}
