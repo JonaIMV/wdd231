@@ -2,32 +2,33 @@ import { loadMembers } from './members.js';
 import { setupViewToggle } from './viewToggle.js';
 import { highlightCurrentPage, setHamburgerMenu } from './wayfinding.js';
 import { getWeather } from './weather.js';
-import { loadSpotlights } from "./spotlights.js";
+import { loadSpotlights } from './spotlights.js';
+import { loadPlaces } from './discover.js';
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM fully loaded and parsed");
 
-  // Load members and toggle view if member container is present
+  // Load Members if on directory page
   const memberContainer = document.getElementById("memberContainer");
   if (memberContainer) {
     loadMembers("memberContainer");
     setupViewToggle("memberContainer");
   }
 
-  // Load spotlight section if present
+  // Load Spotlights if available
   const spotlightContainer = document.getElementById("spotlight-container");
   if (spotlightContainer) {
     loadSpotlights("spotlight-container");
   }
 
-  // Highlight current nav item and set responsive menu
+  // Highlight nav and hamburger toggle
   highlightCurrentPage();
   setHamburgerMenu();
 
-  // Display weather data
+  // Load weather info
   getWeather();
 
-  // Handle join page logic
+  // Load Join Us logic
   if (window.location.pathname.endsWith("join.html")) {
     import("./join-us.js")
       .then(module => {
@@ -40,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 
-  // Handle thank you page logic
+  // Load Thank You page logic
   if (window.location.pathname.endsWith("thankyou.html")) {
     import("./join-us.js")
       .then(module => {
@@ -53,16 +54,20 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 
-  // Set last modified date in footer
+  // Set Last Modified and Current Year
   const lastModifiedEl = document.getElementById("lastModified");
   if (lastModifiedEl) {
     lastModifiedEl.textContent = `Last Modified: ${document.lastModified}`;
   }
 
-  // Set current year in footer
   const yearEl = document.getElementById("year");
   if (yearEl) {
-    const currentYear = new Date().getFullYear();
-    yearEl.textContent = currentYear;
+    yearEl.textContent = new Date().getFullYear();
+  }
+
+  // Load Discover page places
+  const placesContainer = document.getElementById("places-container");
+  if (placesContainer) {
+    loadPlaces("places-container");
   }
 });

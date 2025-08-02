@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Maya Museum of Cancun",
+    "location": "Blvd. Kukulcán Km 16.5, Hotel Zone, Cancun, Quintana Roo",
+    "description": "An archaeological museum featuring over 350 ancient Maya artifacts and the San Miguelito archaeological site within the grounds.",
+    "image": "images/museomaya.webp"
+  },
+  {
+    "name": "Underwater Museum of Art (MUSA)",
+    "location": "Off the coast of Punta Nizuc, Hotel Zone, Cancun, Quintana Roo",
+    "description": "An underwater sculpture museum with over 500 submerged statues, designed to promote coral life and accessible by snorkeling or diving.",
+    "image": "images/underwater.webp"
+  },
+  {
+    "name": "El Rey Ruins",
+    "location": "Blvd. Kukulcán Km 17, Hotel Zone, Cancun, Quintana Roo",
+    "description": "A small but significant ancient Maya archaeological site, known for its stone structures and friendly iguanas roaming the area.",
+    "image": "images/elrey.webp"
+  },
+  {
+    "name": "Fifth Avenue (Quinta Avenida)",
+    "location": "Between 10th and 38th Streets, Playa del Carmen, Quintana Roo",
+    "description": "A lively pedestrian street filled with shops, restaurants, art galleries, street performers, and a vibrant local atmosphere.",
+    "image": "images/5thav.webp"
+  },
+  {
+    "name": "Chaak Tun Cenote",
+    "location": "Av. Benito Juárez km 4, Playa del Carmen, Quintana Roo",
+    "description": "An underground cenote system featuring dramatic stalactites and crystal-clear water, ideal for snorkeling and guided cave tours.",
+    "image": "images/chaaktun.webp"
+  },
+  {
+    "name": "Xplor Adventure Park",
+    "location": "Highway 307, Km 282, Playa del Carmen, Quintana Roo",
+    "description": "An outdoor adventure park offering zip lines, underground rivers, amphibious vehicles, and spelunking through jungle caves.",
+    "image": "images/xplor.webp"
+  },
+  {
+    "name": "Puerto Morelos Reef National Park",
+    "location": "In front of the main pier, Puerto Morelos, Quintana Roo",
+    "description": "A protected marine area known for its shallow coral reef, excellent for snorkeling, kayaking, and observing marine life.",
+    "image": "images/reefpuertomorelos.webp"
+  },
+  {
+    "name": "Town Square and Hunab-Ku Artisan Market",
+    "location": "Javier Rojo Gómez Street, Puerto Morelos, Quintana Roo",
+    "description": "The heart of Puerto Morelos featuring a local artisan market, church, tilted lighthouse, and a laid-back community atmosphere.",
+    "image": "images/hunabku.webp"
+  }
+]
