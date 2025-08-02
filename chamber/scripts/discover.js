@@ -12,6 +12,7 @@ export async function loadPlaces(containerId) {
       image.src = place.image;
       image.alt = `Image of ${place.name}`;
       image.loading = 'lazy';
+      image.classList.add('gallery-img');
       image.width = 245;
       image.height = 150;
       const info = document.createElement('div');
