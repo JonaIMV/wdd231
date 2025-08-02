@@ -26,7 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
   setHamburgerMenu();
 
   // Load weather info
-  getWeather();
+  const weatherContainer = document.getElementById("weather-container");
+  if (weatherContainer) {
+    getWeather();
+  }
 
   // Load Join Us logic
   if (window.location.pathname.endsWith("join.html")) {

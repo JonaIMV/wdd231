@@ -16,6 +16,8 @@ export async function loadPlaces(containerId) {
       image.src = place.image;
       image.alt = `Image of ${place.name}`;
       image.loading = 'lazy';
+      image.width = 250;
+      image.height = 150;
 
       const info = document.createElement('div');
       info.classList.add('place-info');
@@ -24,7 +26,7 @@ export async function loadPlaces(containerId) {
       title.textContent = place.name;
 
       const address = document.createElement('address');
-      address.textContent = place.location; 
+      address.textContent = place.location;
 
       const desc = document.createElement('p');
       desc.textContent = place.description;
@@ -32,7 +34,7 @@ export async function loadPlaces(containerId) {
       const button = document.createElement('button');
       button.textContent = 'Learn more';
 
-      
+
       info.appendChild(title);
       info.appendChild(address);
       info.appendChild(desc);

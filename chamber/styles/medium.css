@@ -2,13 +2,11 @@
   .place-card {
     flex-direction: row;
   }
-
   .place-card img {
     width: 300px;
     height: 200px;
     flex-shrink: 0;
   }
-
   .place-info {
     flex: 1;
   }
