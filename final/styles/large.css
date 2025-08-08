@@ -1,0 +1,50 @@
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: var(--color-white);
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  .nav-menu a{
+    color: var(--color-navy);
+  }
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-menu a {
+    font-size: 18px;
+  }
+  /*testimonial section*/
+  .testimonial-properties {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .testimonial {
+    flex: 1;
+    margin-right: 2rem;
+  }
+
+  .property-cards-container {
+    flex: 2;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
