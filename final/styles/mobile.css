@@ -40,6 +40,7 @@ header {
 
 
 body{
+   overflow-x: hidden;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -246,6 +247,77 @@ h4::after {
   margin: 0.5rem auto 0;
   border-radius: 2px;
 }
+.last-viewed-section {
+  margin: 1rem auto;
+  padding: 0.8rem 1rem;
+  max-width: 95%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  font-family: var(--font-primary, Arial, sans-serif);
+}
+
+.last-viewed-section h2 {
+  font-size: 1.2rem;
+  color: var(--color-navy, #002147);
+  text-align: center;
+  margin-bottom: 0.6rem;
+}
+
+/* Tarjeta más pequeña */
+.last-viewed-property-card {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+/* Imagen muy pequeña */
+.last-viewed-property-card img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+}
+
+/* Texto */
+.last-viewed-property-info {
+  flex: 1;
+  min-width: 0; /* evita desbordes */
+}
+
+.last-viewed-property-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--color-navy, #002147);
+}
+
+.last-viewed-property-info p {
+  margin: 0.2rem 0;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.last-viewed-property-info .price {
+  font-weight: bold;
+  color: var(--color-accent, #0077cc);
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .last-viewed-property-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .last-viewed-property-card img {
+    width: 100%;
+    height: auto;
+  }
+}
 
 
 .properties-grid {
@@ -301,8 +373,6 @@ h4::after {
   overflow: auto; 
   background-color: rgba(0, 0, 0, 0.7);
 }
-
-/* ===== MODAL BOX ===== */
 .modal-content {
   background-color: var(--color-white);
   margin: 5% auto;
@@ -313,8 +383,6 @@ h4::after {
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   position: relative;
 }
-
-/* ===== CLOSE BUTTON ===== */
 .close {
   position: absolute;
   top: 12px;
@@ -326,12 +394,9 @@ h4::after {
   transition: color 0.3s ease;
   user-select: none;
 }
-
 .close:hover {
   color: var(--color-gray);
 }
-
-/* ===== MODAL TITLE ===== */
 #modalTitle {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -341,8 +406,6 @@ h4::after {
   font-weight: 700;
   text-align: center;
 }
-
-/* ===== MODAL DESCRIPTION ===== */
 #modalDescription {
   margin-top: 1rem;
   color: var(--color-gray);
@@ -350,8 +413,6 @@ h4::after {
   line-height: 1.5;
   text-align: justify;
 }
-
-/* ===== IMAGE SLIDER ===== */
 .image-slider {
   position: relative;
   overflow: hidden;
@@ -361,8 +422,6 @@ h4::after {
   margin: 0 auto;
   max-width: 100%;
 }
-
-/* ===== SLIDER IMAGES ===== */
 .image-slider img {
   width: 100%;
   height: 400px;
@@ -376,13 +435,11 @@ h4::after {
   left: 0;
 }
 
-/* Imagen activa */
 .image-slider img.active {
   opacity: 1;
   position: relative;
 }
 
-/* ===== ARROWS ===== */
 .slider-arrow {
   position: absolute;
   top: 50%;
@@ -488,11 +545,11 @@ footer {
     margin-top: 2rem;
     flex-wrap: wrap;
     max-width: 100%;
-    padding: 0 1rem; /* Espacio lateral */
+    padding: 0 1rem; 
     box-sizing: border-box;
 }
 
-/* Formulario */
+/* Form */
 .contact-form {
     flex: 2;
     background-color: #ffffff;

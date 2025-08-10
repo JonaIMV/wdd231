@@ -3,27 +3,24 @@ import { highlightCurrentPage } from './wayFinding.js';
 import { initHeroSlider } from './hero-slide.js';
 import { initPropertyCarousel } from './property-carousel.js';
 import { loadProperties } from './properties.js';
-import { initPropertyModal } from './property-modal.js';
+import { initPropertyModal, showLastViewedProperty } from './property-modal.js';
 import { loadExchangeRates } from './exchange-rates.js';
 
 document.addEventListener("DOMContentLoaded", async () => {
-
   initMenuToggle();
   highlightCurrentPage();
   initHeroSlider();
   initPropertyCarousel();
+  loadExchangeRates();
 
-  // Solo carga tasas si está el contenedor de tasas
-  if (document.getElementById("rates-list")) {
-    loadExchangeRates();
+  const properties = await loadProperties('properties-container', 'data/forSale.json');
+  if (properties) {
+    initPropertyModal(properties);
   }
 
-  // Solo carga propiedades si está el contenedor de properties
-  if (document.getElementById("properties-container")) {
-    const properties = await loadProperties('properties-container', 'data/forSale.json');
-    if (properties) {
-      initPropertyModal(properties);
-    }
+  const lastViewedContainer = document.getElementById('lastViewedPropertyContainer');
+  if (lastViewedContainer) {
+    showLastViewedProperty();
   }
 
   const lastModifiedEl = document.getElementById("lastModified");

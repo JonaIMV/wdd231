@@ -8,7 +8,6 @@ export function initPropertyModal(properties) {
   let currentIndex = 0;
   let currentImages = [];
 
-  // Abre modal
   document.querySelectorAll('.property-card').forEach((card, index) => {
     card.addEventListener('click', () => {
       const property = properties[index];
@@ -16,7 +15,6 @@ export function initPropertyModal(properties) {
       modalDescription.textContent = property.description;
       currentImages = property.images;
 
-      // Generar slider con flechas y puntos
       modalImages.innerHTML = `
         <div class="image-slider">
           <span class="slider-arrow left">&#10094;</span>
@@ -34,42 +32,74 @@ export function initPropertyModal(properties) {
 
       currentIndex = 0;
       modal.style.display = 'block';
+      localStorage.setItem('lastViewedProperty', JSON.stringify(property));
       initSliderControls();
     });
   });
 
-  // Cerrar modal
-  closeBtn.addEventListener('click', () => modal.style.display = 'none');
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
   window.addEventListener('click', (e) => {
-    if (e.target === modal) modal.style.display = 'none';
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
   });
 
-  // Funciones de control de slider
   function initSliderControls() {
-    const imgs = modalImages.querySelectorAll('img');
-    const dots = modalImages.querySelectorAll('.dot');
+    const slider = modalImages.querySelector('.image-slider');
+    const images = slider.querySelectorAll('img');
+    const leftArrow = slider.querySelector('.slider-arrow.left');
+    const rightArrow = slider.querySelector('.slider-arrow.right');
+    const dots = slider.querySelectorAll('.dot');
 
-    function showImage(index) {
-      imgs.forEach((img, i) => img.classList.toggle('active', i === index));
-      dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+    function showSlide(index) {
+      if (index < 0) index = images.length - 1;
+      if (index >= images.length) index = 0;
       currentIndex = index;
+
+      images.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+      });
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
     }
 
-    modalImages.querySelector('.slider-arrow.left').addEventListener('click', () => {
-      let newIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
-      showImage(newIndex);
-    });
-
-    modalImages.querySelector('.slider-arrow.right').addEventListener('click', () => {
-      let newIndex = (currentIndex + 1) % currentImages.length;
-      showImage(newIndex);
-    });
-
+    leftArrow.onclick = () => showSlide(currentIndex - 1);
+    rightArrow.onclick = () => showSlide(currentIndex + 1);
     dots.forEach(dot => {
-      dot.addEventListener('click', () => {
-        let index = parseInt(dot.dataset.index);
-        showImage(index);
-      });
+      dot.onclick = () => showSlide(Number(dot.dataset.index));
     });
-  }
+
+    showSlide(currentIndex);
+    }
+    
 }
+export function showLastViewedProperty() {
+  const container = document.getElementById('lastViewedPropertyContainer');
+  if (!container) return;
+
+  const lastViewed = localStorage.getItem('lastViewedProperty');
+  if (!lastViewed) {
+    container.innerHTML = '<p>No property viewed yet.</p>';
+    return;
+  }
+
+  const property = JSON.parse(lastViewed);
+  container.innerHTML = `
+    <h2>Last Viewed Property</h2>
+    <div class="last-viewed-property-card">
+      <img src="${property.image || (property.images && property.images[0]) || 'images/placeholder.png'}" 
+           alt="${property.title}" loading="lazy">
+      <div class="last-viewed-property-info">
+        <h3>${property.title}</h3>
+        <p>${property.description}</p>
+        <p class="price">${property.price || 'N/A'}</p>
+      </div>
+    </div>
+  `;
+}
+
+
+
