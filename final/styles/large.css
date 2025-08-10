@@ -47,4 +47,15 @@
     gap: 1rem;
     flex-wrap: wrap;
   }
+  .contact-container {
+        flex-direction: column;
+        padding: 0 0.8rem; /* Menos espacio en móviles */
+    }
+
+    .contact-form,
+    .exchange-rates {
+        flex: 1 1 100%;
+        min-width: unset;
+    }
+
 }

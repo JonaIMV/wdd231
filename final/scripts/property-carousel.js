@@ -5,7 +5,7 @@ function createCard(property) {
   return `
     <div class="property-card">
       <img src="${property.image}" alt="${property.title}" loading="lazy">
-      <h3>${property.title}</h3>
+      <h4>${property.title}</h4>
       <p><strong>${property.location}</strong></p>
       <p>${property.description}</p>
       <p class="price">${property.price}</p>
