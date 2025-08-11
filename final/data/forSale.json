@@ -8,9 +8,9 @@
     "alt": "Brisas beach condo",
     "location": "Cancun Hotel Zone",
     "images": [
-      "images/brisas1.jpg",
-      "images/brisas2.jpg",
-      "images/brisas3.jpg"
+      "images/brisas1.webp",
+      "images/brisas2.webp",
+      "images/brisas3.webp"
     ]
   },
   {
@@ -18,13 +18,13 @@
     "title": "Residential Villa Arrecifes",
     "description": "Spacious villa with garden and pool, 4 bedrooms, 3 baths.",
     "price": "$780,000",
-    "image": "images/arrecifes-small.jpg",
+    "image": "images/arrecifes.webp",
     "alt": "Residential villa",
     "location": "Puerto Morelos",
     "images": [
-      "images/arrecifes1.jpg",
-      "images/arrecifes2.jpg",
-      "images/arrecifes3.jpg"
+      "images/arrecifes1.webp",
+      "images/arrecifes2.webp",
+      "images/arrecifes3.webp"
     ]
   },
   {
@@ -36,9 +36,9 @@
     "alt": "Condo with pool",
     "location": "Puerto Aventuras",
     "images": [
-      "images/puerto1.jpg",
-      "images/puerto2.jpg",
-      "images/puerto3.jpg"
+      "images/puerto1.webp",
+      "images/puerto2.webp",
+      "images/puerto3.webp"
     ]
   }
 ]

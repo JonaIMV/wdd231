@@ -153,7 +153,7 @@ h1{
 }
 
 .hero-cta-button:hover {
-  background-color: var(--color-gray, #b1abab );
+  background-color:   #0056b3;
 }
 /*Cards container section*/
 
@@ -250,7 +250,7 @@ h4::after {
 .last-viewed-section {
   margin: 1rem auto;
   padding: 0.8rem 1rem;
-  max-width: 95%;
+  max-width: 500px; /* ancho máximo reducido */
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -258,35 +258,25 @@ h4::after {
   font-family: var(--font-primary, Arial, sans-serif);
 }
 
+/* Título */
 .last-viewed-section h2 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--color-navy, #002147);
   text-align: center;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
 }
 
-/* Tarjeta más pequeña */
+/* Contenedor interno */
 .last-viewed-property-card {
   display: flex;
-  gap: 0.6rem;
-  align-items: center;
-  flex-wrap: nowrap;
+  flex-direction: column; /* en columna para que no se vea tan alargado */
+  gap: 0.4rem;
 }
 
-/* Imagen muy pequeña */
-.last-viewed-property-card img {
-  width: 80px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
-  flex-shrink: 0;
-}
-
-/* Texto */
+/* Información textual */
 .last-viewed-property-info {
   flex: 1;
-  min-width: 0; /* evita desbordes */
+  min-width: 0;
 }
 
 .last-viewed-property-info h3 {
@@ -298,28 +288,32 @@ h4::after {
 .last-viewed-property-info p {
   margin: 0.2rem 0;
   font-size: 0.85rem;
-  color: #555;
+  color: #010101;
 }
 
 .last-viewed-property-info .price {
   font-weight: bold;
-  color: var(--color-accent, #0077cc);
+  color: var(--color-navy);
+  margin-bottom: 0.4rem;
 }
 
-/* Responsive */
-@media (max-width: 400px) {
-  .last-viewed-property-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .last-viewed-property-card img {
-    width: 100%;
-    height: auto;
-  }
+/* Botón Buy Now */
+.buy-now-btn {
+  display: inline-block;
+  background-color: var(--color-navy);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.85rem;
+  transition: background-color 0.3s ease;
+  text-align: center;
 }
 
-
+.buy-now-btn:hover {
+  background-color: #0056b3;
+}
 .properties-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -330,7 +324,7 @@ h4::after {
   margin-right: auto;
   padding: 0 1rem; 
 }
-
+y
 .property-card {
   background-color: var(--color-cream);
   padding: 1rem;

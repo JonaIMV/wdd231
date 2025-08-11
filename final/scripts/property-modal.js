@@ -87,19 +87,23 @@ export function showLastViewedProperty() {
   }
 
   const property = JSON.parse(lastViewed);
+
+  // URL del formulario con parámetros para autocompletar
+  const formUrl = `contact-us.html?title=${encodeURIComponent(property.title)}&price=${encodeURIComponent(property.price)}`;
+
   container.innerHTML = `
     <h2>Last Viewed Property</h2>
     <div class="last-viewed-property-card">
-      <img src="${property.image || (property.images && property.images[0]) || 'images/placeholder.png'}" 
-           alt="${property.title}" loading="lazy">
       <div class="last-viewed-property-info">
         <h3>${property.title}</h3>
         <p>${property.description}</p>
         <p class="price">${property.price || 'N/A'}</p>
+        <a href="${formUrl}" class="buy-now-btn">Buy Now</a>
       </div>
     </div>
   `;
 }
+
 
 
 

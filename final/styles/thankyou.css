@@ -1,0 +1,62 @@
+main {
+
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    box-sizing: border-box;
+    font-family: var(--font-primary, "Playfair Display", serif);
+    color: #08203a;
+    flex: 1 0 auto;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.thank-card {
+    background: #ffffff;
+    border: 1px solid #e6eef6;
+    border-radius: 10px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 12px rgba(3, 18, 34, 0.06);
+}
+h1 { margin-top: 0; color: var(--color-navy, #003049); 
+}
+.summary { 
+    margin-top: 1rem; font-size: 0.95rem; color: #334; 
+}
+.summary dt { 
+    font-weight: 700; margin-top: .6rem; 
+}
+.summary dd {
+     margin: 0.25rem 0 0.6rem 0;
+     }
+.actions { 
+    margin-top: 1rem; 
+}
+.btn {
+    display:inline-block;
+    padding:.5rem 1rem;
+    background:var(--color-navy,#003049);
+    color:#fff;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:700;
+}
+#confetti-canvas {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100vw;
+    height: 100vh;
+    /*pointer-events: none;*/
+    z-index: 9999;
+}
+.no-data { 
+    color:#666; 
+    font-style:italic;
+ }  

@@ -43,41 +43,34 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="for-sale.html">For Sale</a></li>
-                <li><a href="about-us.html">About Us</a></li>
                 <li><a href="contact-us.html">Contact Us</a></li>
             </ul>
             </nav>
         </div>
     </header>
     <main>
-    <h1>For sale</h1>
-
-    <div class="hero">
-        <div class="hero-slider">
-        <img src="images/brisas.png" alt="Brisas beach condo" class="slide active">
-        <img src="images/arrecifes-small.jpg" alt="Residential villa" class="slide">
-        <img src="images/puerto-aventuras.webp" alt="Condo with pool" class="slide">
+        <h1>For sale</h1>
+        <div class="hero">
+            <div class="hero-slider">
+            <img src="images/brisas.webp" alt="Brisas beach condo" class="slide active">
+            <img src="images/arrecifes.webp" alt="Residential villa" class="slide">
+            <img src="images/puerto-aventuras.webp" alt="Condo with pool" class="slide">
+            </div>
+            <a href="contact-us.html" class="hero-cta-button">Contact us</a>
         </div>
-        <a href="contact-us.html" class="hero-cta-button">Contact us</a>
-    </div>
-
-    <section>
-        <h4>Find your slice of paradise</h4>
-
-        <!-- Aquí se rellena con JS -->
-        <section id="lastViewedPropertyContainer" class="last-viewed-section"></section>
-
-        <div id="properties-container" class="properties-grid"></div>
-
-        <div id="propertyModal" class="modal">
-        <div class="modal-content">
-            <button class="close" aria-label="Close modal">&times;</button>
-            <h2 id="modalTitle">Properties</h2>
-            <div id="modalImages" class="image-slider"></div>
-            <p id="modalDescription"></p>
-        </div>
-        </div>
-    </section>
+        <section>
+            <h4>Find your slice of paradise</h4>
+            <div id="lastViewedPropertyContainer" class="last-viewed-section" aria-live="polite"></div>   
+            <div id="properties-container" class="properties-grid" ></div>
+            <div id="propertyModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+                <div class="modal-content">
+                <button class="close" aria-label="Close modal">&times;</button>
+                <h2 id="modalTitle">Property</h2>
+                <div id="modalImages" class="image-slider" aria-live="polite"></div>
+                <p id="modalDescription"></p>
+                </div>
+            </div>
+            </section>
     </main>
     <footer>
         <div class="footer-info">

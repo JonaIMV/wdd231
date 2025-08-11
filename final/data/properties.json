@@ -1,28 +1,28 @@
 [
   {
     "title": "Playa Paraiso Condo",
-    "image": "images/paraiso.jpg",
+    "image": "images/paraiso.webp",
     "price": "$250,000",
     "location": "Playa del Carmen",
     "description": "Modern condo at Playa Paraiso."
   },
   {
     "title": "Cozy house at Pauerto Morelos",
-    "image": "images/arrecifes-small.jpg",
+    "image": "images/arrecifes.webp",
     "price": "$200,000",
     "location": "Puerto Morelos",
     "description": "Beautiful house 2 beds, 1 bath."
   },
   {
     "title": "Downtown Apartment",
-    "image": "images/downtown.jpg",
+    "image": "images/downtown.webp",
     "price": "$120,000",
     "location": "Puerto Morelos",
     "description": "2-bedroom apartment with incredible amenities."
   },
   {
     "title": "Eco land to build your dream home",
-    "image": "images/eco-land.jpg",
+    "image": "images/eco-land.webp",
     "price": "$60,000",
     "location": "Puerto Morelos",
     "description": "Sustainable land surrounded by lush vegetation."
