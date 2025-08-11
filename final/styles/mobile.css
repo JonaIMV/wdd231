@@ -12,7 +12,7 @@
 header {
   
   z-index: 1000;
-  background-color: var(--color-navy);
+  background-color: var(--color-cream);
   border-bottom: 1px solid var(--color-gray);
   padding: 10px 20px;
   font-family: var(--font-primary);
@@ -23,7 +23,7 @@ header {
 }
 
 .brand h2 {
-  color: var(--color-white);
+  color: var(--color-navy);
   margin-left: 10px; 
   font-size: 24px;
   font-weight: 700;
@@ -68,13 +68,13 @@ body{
 
 .nav-menu a {
   text-decoration: none;
-  color: var(--color-white);
+  color: var(--color-navy);
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .nav-menu a:hover {
-  color: var(--color-gray);
+  color: #750000;
 }
 
 
@@ -84,11 +84,11 @@ body{
   border: none;
   cursor: pointer;
   display: none;
-  color: var(--color-white);
+  color: var(--color-navy);
 }
 /*wayFinding styles*/
 .nav-menu a.active {
-  color: var(--color-gray);
+  color: #750000;
   border-bottom: 2px solid var(--color-navy);
 }
 h1{
@@ -179,17 +179,16 @@ h3 {
 }
 
 .testimonial {
-  background-color: var(--cream); /* fondo suave */
-  padding: 1.5rem; /* espacio interno */
-  border-left: 5px solid var(--navy); /* línea vertical decorativa */
-  border-radius: 0.5rem; /* esquinas redondeadas */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* sombra ligera */
+  background-color: var(--cream); 
+  padding: 1.5rem; 
+  border-left: 5px solid var(--navy); 
+  border-radius: 0.5rem; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
   font-style: italic;
   color: var(--navy);
-  line-height: 1.6; /* mejor legibilidad */
+  line-height: 1.6; 
 }
-
 .testimonial footer {
   margin-top: 1rem;
   font-weight: bold;
@@ -250,7 +249,7 @@ h4::after {
 .last-viewed-section {
   margin: 1rem auto;
   padding: 0.8rem 1rem;
-  max-width: 500px; /* ancho máximo reducido */
+  max-width: 500px; 
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -269,8 +268,7 @@ h4::after {
 /* Contenedor interno */
 .last-viewed-property-card {
   display: flex;
-  flex-direction: column; /* en columna para que no se vea tan alargado */
-  gap: 0.4rem;
+  flex-direction: column; 
 }
 
 /* Información textual */
@@ -324,7 +322,6 @@ h4::after {
   margin-right: auto;
   padding: 0 1rem; 
 }
-y
 .property-card {
   background-color: var(--color-cream);
   padding: 1rem;
@@ -346,7 +343,7 @@ y
 
 .property-card p {
   margin: 0.25rem 0;
-  color: var(--color-gray);
+  color: #750000;
 }
 
 .property-card .price {
@@ -402,7 +399,7 @@ y
 }
 #modalDescription {
   margin-top: 1rem;
-  color: var(--color-gray);
+  color: var(--color-navy);
   font-family: var(--font-primary);
   line-height: 1.5;
   text-align: justify;
