@@ -7,7 +7,14 @@
 
   --font-primary: 'Playfair Display', serif;
 }
+.hidden {
+  display: none;
+}
 
+.author {
+  font-style: italic;
+  color: #555;
+}
 /* header styles */
 header {
   
