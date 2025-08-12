@@ -15,9 +15,9 @@
   },
   {
     "id": 2,
-    "title": "Residential Villa Arrecifes",
+    "title": "House at Selva Escondida Arrecifes Street",
     "description": "Spacious villa with garden and pool, 4 bedrooms, 3 baths.",
-    "price": "$780,000",
+    "price": "$150,000",
     "image": "images/arrecifes.webp",
     "alt": "Residential villa",
     "location": "Puerto Morelos",
@@ -31,7 +31,7 @@
     "id": 3,
     "title": "Puerto Aventuras Condo",
     "description": "Modern condo with pool access, 3 bedrooms, 2 baths.",
-    "price": "$420,000",
+    "price": "$250,000",
     "image": "images/puerto-aventuras.webp",
     "alt": "Condo with pool",
     "location": "Puerto Aventuras",
@@ -39,6 +39,77 @@
       "images/puerto1.webp",
       "images/puerto2.webp",
       "images/puerto3.webp"
+    ]
+  },
+  {
+    
+    "id": 4,
+    "title": "Puerto Morelos Apartment 26H Selva Escondida",
+    "description": "Cozy apartment in gated community, 2 bedrooms, 1 bath.",
+    "price": "$125,000",
+    "image": "images/downtown.webp",
+    "alt": "Apartment in gated community",
+    "location": "Puerto Morelos",
+    "images": [
+      "images/downtown1.webp",
+      "images/downtown2.webp",
+      "images/downtown3.webp"
+    ]
+    
+  },
+  {
+    "id": 5,
+    "title": "PuntaVista house Puerto Morelos",
+    "description": "Beautiful house in gate community, 3 bedroom, 3 bath.",
+    "price": "$360,000",
+    "image": "images/puntavista.webp",
+    "alt": "Gate community house",
+    "location": "Puesrto Morelos",
+    "images": [
+      "images/puntavista1.webp",
+      "images/puntavista2.webp",
+      "images/puntavista3.webp"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Selva Escondida apartment 9B Puerto Morelos",
+    "description": "Charming Apartment, 2 bedrooms, 1 baths.",
+    "price": "$110,000",
+    "image": "images/selva9b.webp",
+    "alt": "Charming house with garden",
+    "location": "Puerto Morelos",
+    "images": [
+      "images/selva1.webp",
+      "images/selva2.webp",
+      "images/selva3.webp"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Lot for sale Regatta Puerto Morelos",
+    "description": "Eco lot at Regatta gate community.",
+    "price": "$50,000",
+    "image": "images/regatta.webp",
+    "alt": "Elegant house with pool",
+    "location": "Puerto Morelos",
+    "images": [
+      "images/regatta1.webp",
+      "images/regatta2.webp",
+      "images/regatta3.webp"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Eco lot for sale in Puntavista Puerto Morelos",
+    "description": "Eco lot in Puntavista gate community.",
+    "price": "$85,000",
+    "image": "images/puntavista-lot.webp",
+    "alt": "Beachfront house",
+    "location": "Puerto Morelos",
+    "images": [
+      "images/puntavista-lot1.webp",
+      "images/puntavista-lot2.webp"
     ]
   }
 ]
