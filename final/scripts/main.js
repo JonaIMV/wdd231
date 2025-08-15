@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   initHeroSlider();
   initPropertyCarousel();
 
-  // Solo cargar tasas de cambio si existen los elementos correspondientes
+  
   if (
     document.getElementById('usd-rate') ||
     document.getElementById('eur-rate') ||
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     initThankYouPage();
   }
 
-  // Solo cargar propiedades si existe el contenedor
+  
   const propertiesContainer = document.getElementById('properties-container');
   if (propertiesContainer) {
     const properties = await loadProperties('properties-container', 'data/forSale.json');
@@ -38,19 +38,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-  // Mostrar última propiedad vista si existe el contenedor
+  
   const lastViewedContainer = document.getElementById('lastViewedPropertyContainer');
   if (lastViewedContainer) {
     showLastViewedProperty();
   }
 
-  // Actualizar fecha de última modificación si existe elemento
+  
   const lastModifiedEl = document.getElementById("lastModified");
   if (lastModifiedEl) {
     lastModifiedEl.textContent = `Last Modified: ${document.lastModified}`;
   }
 
-  // Actualizar año actual si existe elemento
+  
   const yearEl = document.getElementById("year");
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();

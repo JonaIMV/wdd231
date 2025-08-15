@@ -10,12 +10,12 @@ export async function loadProperties(containerId, jsonUrl) {
       return;
     }
 
-    container.innerHTML = ''; // Limpia contenido previo
+    container.innerHTML = ''; 
 
     properties.forEach(prop => {
       const card = document.createElement('div');
       card.classList.add('property-card');
-      card.dataset.propId = prop.id; // agrega id para mejor referencia
+      card.dataset.propId = prop.id; 
 
       card.innerHTML = `
         <img src="${prop.image}" alt="${prop.alt}" loading="lazy" />
@@ -28,7 +28,7 @@ export async function loadProperties(containerId, jsonUrl) {
       container.appendChild(card);
     });
 
-    return properties; // **devuelve el array de propiedades**
+    return properties; 
 
   } catch (error) {
     console.error('Error loading properties:', error);

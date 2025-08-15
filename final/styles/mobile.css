@@ -527,6 +527,15 @@ footer {
 .social-icons a:hover img {
   filter: brightness(0.8) invert(1); 
 }
+.video-link {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.video-link a {
+  color: var(--color-white);
+    font-weight: bold;
+}
 /*contact page styles*/
 
 

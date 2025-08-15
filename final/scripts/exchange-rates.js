@@ -11,18 +11,18 @@ export async function loadExchangeRates() {
         const data = await response.json();
         conversionRates = data.conversion_rates;
 
-        // Mostrar tasas rápidas USD/EUR/CAD -> MXN
+        
         document.getElementById("usd-rate").textContent = conversionRates.MXN.toFixed(2);
         const cadToMxn = conversionRates.MXN / conversionRates.CAD;
         document.getElementById("cad-rate").textContent = cadToMxn.toFixed(2);
         const eurToMxn = conversionRates.MXN / conversionRates.EUR;
         document.getElementById("eur-rate").textContent = eurToMxn.toFixed(2);
 
-        // Llenar selects del conversor
+      
         populateCurrencySelect("from-currency", conversionRates);
         populateCurrencySelect("to-currency", conversionRates);
 
-        // Evento del botón Convert
+        
         document.getElementById("convert-btn").addEventListener("click", convertCurrency);
 
     } catch (error) {

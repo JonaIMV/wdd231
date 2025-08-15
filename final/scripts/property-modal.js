@@ -88,7 +88,7 @@ export function showLastViewedProperty() {
 
   const property = JSON.parse(lastViewed);
 
-  // URL del formulario con parámetros para autocompletar
+  
   const formUrl = `contact-us.html?title=${encodeURIComponent(property.title)}&price=${encodeURIComponent(property.price)}`;
 
   container.innerHTML = `
